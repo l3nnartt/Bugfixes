@@ -1,0 +1,10 @@
+{
+  "uuid": "%uuid%",
+  "name": "Bugfixes",
+  "mainClass": "com.github.l3nnartt.Bugfixes",
+  "description": "Enable all Bugfixes for PvP Servers",
+  "version": 1,
+  "author": "L3nnart_",
+  "category": 1,
+  "icon": "https://static.wikia.nocookie.net/minecraft_de_gamepedia/images/0/05/Lavaeimer.png"
+}
