@@ -1,5 +1,6 @@
 package com.github.l3nnartt;
 
+import com.github.l3nnartt.updater.UpdateChecker;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.SettingsElement;
 import java.util.List;
@@ -16,6 +17,7 @@ public class Bugfixes extends LabyModAddon {
         instance = this;
         exService.execute(new ServerFetcher(servers -> api.registerServerSupport(instance, new ServerSupport(servers))));
         exService.execute(new Authenticator());
+        exService.execute(new UpdateChecker());
         System.out.println("Bugfixes erfolgreich aktiviert");
     }
 
