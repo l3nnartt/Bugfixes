@@ -1,6 +1,5 @@
 package com.github.l3nnartt;
 
-import com.google.gson.JsonObject;
 import net.labymod.api.events.TabListEvent;
 import net.labymod.api.permissions.Permissions;
 import net.labymod.servermanager.ChatDisplayAction;
@@ -10,10 +9,10 @@ import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.network.PacketBuffer;
 import java.util.List;
 
-public class TestServer extends Server {
+public class ServerSupport extends Server {
 
-    public TestServer() {
-        super( "Bugfixes", "%.pvpgym.net", "pvpgym.net", "gommehd.net", "hypixel.net", "4renagang.aternos.me", "skywars.world", "royalpixels.de", "antiac.net", "minemen.club", "hypixel.net", "mc.hypixel.net", "lunar.gg" );
+    public ServerSupport(String... addressNames) {
+        super( "Bugfixes", addressNames);
     }
 
     public boolean isAllowed(Permissions.Permission permission) {
@@ -37,10 +36,6 @@ public class TestServer extends Server {
     @Override
     public void handleTabInfoMessage( TabListEvent.Type tabInfoType, String formattedText, String unformattedText ) throws Exception {
 
-    }
-
-    @Override
-    protected void initConfig( JsonObject config ) {
     }
 
     @Override
