@@ -2,7 +2,7 @@
   "uuid": "%uuid%",
   "name": "Bugfixes",
   "mainClass": "com.github.l3nnartt.Bugfixes",
-  "description": "Enable all Bugfixes for PvP Servers",
+  "description": "Enable all Bugfixes + Markers",
   "version": 1,
   "author": "L3nnart_",
   "category": 1,
