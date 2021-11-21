@@ -29,7 +29,7 @@ public class Main {
 			if (showConfirmDialog(String.format(lang.get("installation"), "1.0"))) {
 				File run = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI());
 				if (run.exists() && run.isFile()) {
-					for (String version : new String[] { "1.8" }) {
+					for (String version : new String[] { "1.16" }) {
 						File addonsDir = new File(dir + "addons-" + version);
 						addonsDir.mkdirs();
 						File mod = new File(addonsDir, "Bugfixes.jar");
