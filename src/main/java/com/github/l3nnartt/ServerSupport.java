@@ -1,6 +1,6 @@
 package com.github.l3nnartt;
 
-import net.labymod.api.events.TabListEvent;
+import net.labymod.api.event.events.client.gui.screen.overlay.PlayerTabListOverlayEvent;
 import net.labymod.api.permissions.Permissions;
 import net.labymod.servermanager.ChatDisplayAction;
 import net.labymod.servermanager.Server;
@@ -21,7 +21,6 @@ public class ServerSupport extends Server {
 
     @Override
     public void onJoin( ServerData serverData ) {
-
     }
 
     @Override
@@ -30,12 +29,11 @@ public class ServerSupport extends Server {
     }
 
     @Override
-    public void handlePluginMessage( String channelName, PacketBuffer packetBuffer ) throws Exception {
+    public void handlePayloadMessage(String s, PacketBuffer packetBuffer) throws Exception {
     }
 
     @Override
-    public void handleTabInfoMessage( TabListEvent.Type tabInfoType, String formattedText, String unformattedText ) throws Exception {
-
+    public void handleTabInfoMessage(PlayerTabListOverlayEvent.Type type, String s, String s1) throws Exception {
     }
 
     @Override
