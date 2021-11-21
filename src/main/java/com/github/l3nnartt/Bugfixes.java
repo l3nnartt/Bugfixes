@@ -16,7 +16,7 @@ public class Bugfixes extends LabyModAddon {
     public void onEnable() {
         instance = this;
         exService.execute(new ServerFetcher(servers -> api.registerServerSupport(instance, new ServerSupport(servers))));
-        exService.execute(new Authenticator());
+        //exService.execute(new Authenticator());
         exService.execute(new UpdateChecker());
         System.out.println("Bugfixes erfolgreich aktiviert");
     }
