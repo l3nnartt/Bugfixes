@@ -28,7 +28,7 @@ public class ServerFetcher implements Runnable {
 
     public void fetch() {
         try {
-            JsonArray config = getURLContent("http://karmatop.de/addon/bugfixes/servers.json").getAsJsonArray();
+            JsonArray config = getURLContent("http://dl.lennartloesche.de/bugfixes/servers.json").getAsJsonArray();
             String[] servers = new String[config.size()];
             for (int i = 0; i < config.size(); i++) {
                 servers[i] = config.get(i).getAsString();
