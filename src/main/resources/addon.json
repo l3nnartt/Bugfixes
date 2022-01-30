@@ -3,8 +3,8 @@
   "name": "Bugfixes",
   "mainClass": "com.github.l3nnartt.Bugfixes",
   "description": "Enable all Bugfixes + Markers",
-  "version": 1,
+  "version": 2,
   "author": "L3nnart_",
   "category": 1,
-  "icon": "https://i.imgur.com/kNUGWv2.png"
+  "icon": "https://dl.lennartloesche.de/bugfixes/logo.png"
 }

@@ -16,15 +16,15 @@ import org.apache.commons.io.IOUtils;
 public class UpdateChecker implements Runnable {
   public void check() {
       try {
-        String content = getURLContent("http://karmatop.de/addon/bugfixes/info.json");
+        String content = getURLContent("http://dl.lennartloesche.de/bugfixes/info.json");
         JsonObject object = (new JsonParser()).parse(content).getAsJsonObject();
         int serverVersion = object.get("version").getAsInt();
-        if (1 < serverVersion) {
-          System.out.println("Outdatet version of Bugfixes detected, restart your Game");
+        if (2 < serverVersion) {
+          System.out.println("[Bugfixes] Outdatet version of Bugfixes detected, restart your Game");
           File file = initFile();
-          Runtime.getRuntime().addShutdownHook(new Thread(new FileDownloader("http://karmatop.de/addon/bugfixes/Bugfixes.jar", file)));
+          Runtime.getRuntime().addShutdownHook(new Thread(new FileDownloader("http://dl.lennartloesche.de/bugfixes/Bugfixes.jar", file)));
         } else {
-          System.out.println("You run on the latest version of Bugfixes");
+          System.out.println("[Bugfixes] You run on the latest version of Bugfixes");
         }
       } catch (IOException e) {
         e.printStackTrace();
