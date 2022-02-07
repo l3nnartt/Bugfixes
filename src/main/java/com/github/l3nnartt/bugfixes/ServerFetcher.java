@@ -1,4 +1,4 @@
-package com.github.l3nnartt;
+package com.github.l3nnartt.bugfixes;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

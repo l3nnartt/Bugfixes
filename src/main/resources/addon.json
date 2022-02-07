@@ -1,9 +1,9 @@
 {
   "uuid": "%uuid%",
   "name": "Bugfixes",
-  "mainClass": "com.github.l3nnartt.Bugfixes",
+  "mainClass": "com.github.l3nnartt.bugfixes.Bugfixes",
   "description": "Enable all Bugfixes + Markers",
-  "version": 2,
+  "version": 3,
   "author": "L3nnart_",
   "category": 1,
   "icon": "https://dl.lennartloesche.de/bugfixes/logo.png"

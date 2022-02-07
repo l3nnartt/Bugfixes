@@ -1,4 +1,4 @@
-package com.github.l3nnartt;
+package com.github.l3nnartt.bugfixes;
 
 import net.labymod.api.events.TabListEvent;
 import net.labymod.api.permissions.Permissions;

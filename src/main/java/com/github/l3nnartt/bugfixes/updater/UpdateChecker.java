@@ -1,6 +1,6 @@
-package com.github.l3nnartt.updater;
+package com.github.l3nnartt.bugfixes.updater;
 
-import com.github.l3nnartt.Bugfixes;
+import com.github.l3nnartt.bugfixes.Bugfixes;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.io.File;
@@ -16,13 +16,13 @@ import org.apache.commons.io.IOUtils;
 public class UpdateChecker implements Runnable {
   public void check() {
       try {
-        String content = getURLContent("http://dl.lennartloesche.de/bugfixes/info.json");
+        String content = getURLContent("http://dl.lennartloesche.de/bugfixes/8/info.json");
         JsonObject object = (new JsonParser()).parse(content).getAsJsonObject();
         int serverVersion = object.get("version").getAsInt();
-        if (2 < serverVersion) {
+        if (3 < serverVersion) {
           System.out.println("[Bugfixes] Outdatet version of Bugfixes detected, restart your Game");
           File file = initFile();
-          Runtime.getRuntime().addShutdownHook(new Thread(new FileDownloader("http://dl.lennartloesche.de/bugfixes/Bugfixes.jar", file)));
+          Runtime.getRuntime().addShutdownHook(new Thread(new FileDownloader("http://dl.lennartloesche.de/bugfixes/8/Bugfixes.jar", file)));
         } else {
           System.out.println("[Bugfixes] You run on the latest version of Bugfixes");
         }

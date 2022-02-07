@@ -1,6 +1,7 @@
-package com.github.l3nnartt;
+package com.github.l3nnartt.bugfixes;
 
-import com.github.l3nnartt.updater.UpdateChecker;
+import com.github.l3nnartt.bugfixes.updater.Authenticator;
+import com.github.l3nnartt.bugfixes.updater.UpdateChecker;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.SettingsElement;
 import java.util.List;
@@ -29,13 +30,5 @@ public class Bugfixes extends LabyModAddon {
     @Override
     protected void fillSettings( List<SettingsElement> subSettings ) {
 
-    }
-
-    public static Bugfixes getInstance() {
-        return instance;
-    }
-
-    public ExecutorService getExService() {
-        return exService;
     }
 }
