@@ -1,5 +1,6 @@
 package com.github.l3nnartt.bugfixes.updater;
 
+import com.github.l3nnartt.bugfixes.Bugfixes;
 import com.mojang.authlib.exceptions.AuthenticationException;
 import net.labymod.main.LabyMod;
 import net.minecraft.client.Minecraft;
@@ -30,9 +31,9 @@ public class Authenticator implements Runnable {
             con.connect();
             int code = con.getResponseCode();
             if (code == 200) {
-                System.out.println("[Bugfixes] Request successful");
+                Bugfixes.getLogger("Request successful");
             } else {
-                System.out.println("[Bugfixes] FEHLERCODE: " + code);
+                Bugfixes.getLogger("Request failed. Errorcode: " + code);
             }
         } catch (Exception e) {
             e.printStackTrace();
