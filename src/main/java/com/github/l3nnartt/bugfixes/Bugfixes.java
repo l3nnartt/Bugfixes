@@ -6,6 +6,7 @@ import com.github.l3nnartt.bugfixes.updater.UpdateChecker;
 import net.labymod.addon.AddonLoader;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.SettingsElement;
+
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -55,7 +56,6 @@ public class Bugfixes extends LabyModAddon {
     }
 
     public static void getLogger(String log) {
-        String prefix = "[Bugfixes] ";
-        System.out.println(prefix + log);
+        System.out.println("[Bugfixes] " + log);
     }
 }

@@ -1,5 +1,6 @@
 package com.github.l3nnartt.bugfixes;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -8,14 +9,10 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Locale;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 
 public class Main {
 
-	private static HashMap<String, String> lang = new HashMap<>();
+	private static final HashMap<String, String> lang = new HashMap<>();
 	private static Icon icon;
 
 	public static void main(String[] args) {

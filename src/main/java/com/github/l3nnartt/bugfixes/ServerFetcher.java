@@ -4,9 +4,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import org.apache.commons.io.IOUtils;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.function.Consumer;
 
 public class ServerFetcher implements Runnable {
@@ -21,7 +23,7 @@ public class ServerFetcher implements Runnable {
         HttpURLConnection con = (HttpURLConnection) (new URL(url)).openConnection();
         con.setConnectTimeout(5000);
         con.connect();
-        String jsonString = IOUtils.toString(con.getInputStream(), "UTF-8");
+        String jsonString = IOUtils.toString(con.getInputStream(), StandardCharsets.UTF_8);
         JsonParser parser = new JsonParser();
         return  parser.parse(jsonString);
     }

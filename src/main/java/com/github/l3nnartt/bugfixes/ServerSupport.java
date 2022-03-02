@@ -7,6 +7,7 @@ import net.labymod.servermanager.Server;
 import net.labymod.settings.elements.SettingsElement;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.network.PacketBuffer;
+
 import java.util.List;
 
 public class ServerSupport extends Server {
