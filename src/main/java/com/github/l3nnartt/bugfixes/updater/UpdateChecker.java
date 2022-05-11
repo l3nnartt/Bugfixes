@@ -1,6 +1,7 @@
 package com.github.l3nnartt.bugfixes.updater;
 
 import com.github.l3nnartt.bugfixes.Bugfixes;
+import com.github.l3nnartt.bugfixes.utils.LoggingUtil;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.labymod.addon.AddonLoader;
@@ -21,12 +22,12 @@ import java.util.jar.JarFile;
 public class UpdateChecker implements Runnable {
   public void check() {
       try {
-        //Get Server Version
+        // get server version
         String serverContent = getURLContent("http://dl.lennartloesche.de/permavoice/8/info.json");
         JsonObject object = (new JsonParser()).parse(serverContent).getAsJsonObject();
         int serverVersion = object.get("version").getAsInt();
 
-        //Get Addon Version
+        // get addon Version
         URLConnection urlConnection = Bugfixes.class.getProtectionDomain().getCodeSource().getLocation().openConnection();
         File addonFile = new File(((JarURLConnection)urlConnection).getJarFileURL().getPath());
         JarFile jarFile = new JarFile(addonFile);
@@ -37,11 +38,11 @@ public class UpdateChecker implements Runnable {
         jarFile.close();
 
         if (addonVersion < serverVersion) {
-          Bugfixes.getLogger("Outdated version of Bugfixes detected, restart your Game");
+          LoggingUtil.info("Outdated version of Bugfixes detected, restart your Game");
           File file = initFile();
           Runtime.getRuntime().addShutdownHook(new Thread(() -> new FileDownloader("http://dl.lennartloesche.de/bugfixes/8/Bugfixes.jar", file).download()));
         } else {
-          Bugfixes.getLogger("You run on the latest version of Bugfixes (" + addonVersion + ")");
+          LoggingUtil.info("You run on the latest version of Bugfixes (" + addonVersion + ")");
         }
       } catch (IOException e) {
         e.printStackTrace();

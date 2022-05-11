@@ -12,8 +12,8 @@ import java.util.List;
 
 public class ServerSupport extends Server {
 
-    public ServerSupport(String... addressNames) {
-        super( "Bugfixes", addressNames);
+    public ServerSupport() {
+        super( "Bugfixes", ".");
     }
 
     public boolean isAllowed(Permissions.Permission permission) {
@@ -26,16 +26,16 @@ public class ServerSupport extends Server {
     }
 
     @Override
-    public ChatDisplayAction handleChatMessage( String clean, String formatted ) throws Exception {
+    public ChatDisplayAction handleChatMessage( String clean, String formatted ) {
         return ChatDisplayAction.NORMAL;
     }
 
     @Override
-    public void handlePluginMessage( String channelName, PacketBuffer packetBuffer ) throws Exception {
+    public void handlePluginMessage( String channelName, PacketBuffer packetBuffer ) {
     }
 
     @Override
-    public void handleTabInfoMessage( TabListEvent.Type tabInfoType, String formattedText, String unformattedText ) throws Exception {
+    public void handleTabInfoMessage( TabListEvent.Type tabInfoType, String formattedText, String unformattedText ) {
 
     }
 
