@@ -13,37 +13,41 @@ import java.util.List;
 public class ServerSupport extends Server {
 
     public ServerSupport() {
-        super( "Bugfixes", ".");
+        super("Bugfixes", ".");
     }
 
+    @Override
     public boolean isAllowed(Permissions.Permission permission) {
         return true;
     }
 
     @Override
-    public void onJoin( ServerData serverData ) {
+    public void onJoin(ServerData serverData) {
 
     }
 
     @Override
-    public ChatDisplayAction handleChatMessage( String clean, String formatted ) {
+    public ChatDisplayAction handleChatMessage(String clean, String formatted) {
         return ChatDisplayAction.NORMAL;
     }
 
     @Override
-    public void handlePluginMessage( String channelName, PacketBuffer packetBuffer ) {
-    }
-
-    @Override
-    public void handleTabInfoMessage( TabListEvent.Type tabInfoType, String formattedText, String unformattedText ) {
+    public void handlePluginMessage(String channelName, PacketBuffer packetBuffer) {
 
     }
 
     @Override
-    public void fillSubSettings( List<SettingsElement> subSettings ) {
+    public void handleTabInfoMessage(TabListEvent.Type tabInfoType, String formattedText, String unformattedText) {
+
     }
 
     @Override
-    public void addModuleLines( List<DisplayLine> lines ) {
+    public void fillSubSettings(List<SettingsElement> subSettings) {
+
+    }
+
+    @Override
+    public void addModuleLines(List<DisplayLine> lines) {
+
     }
 }

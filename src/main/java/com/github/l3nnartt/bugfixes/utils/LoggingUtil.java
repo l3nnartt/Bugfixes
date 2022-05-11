@@ -9,7 +9,7 @@ public class LoggingUtil {
     /**
      * Logs a message at the INFO level.
      *
-     * @param message  message to log at the INFO level
+     * @param message message to log at the INFO level
      */
 
     public static void info(String message) {
@@ -19,7 +19,7 @@ public class LoggingUtil {
     /**
      * Logs a message at the WARNING level.
      *
-     * @param message  message to log at the WARNING level
+     * @param message message to log at the WARNING level
      */
     public static void warning(String message) {
         LOGGER.warning(PREFIX + message);
@@ -28,7 +28,7 @@ public class LoggingUtil {
     /**
      * Logs a message at the SEVERE level.
      *
-     * @param message  message to log at the SEVERE level
+     * @param message message to log at the SEVERE level
      */
     public static void error(String message) {
         LOGGER.severe(PREFIX + message);

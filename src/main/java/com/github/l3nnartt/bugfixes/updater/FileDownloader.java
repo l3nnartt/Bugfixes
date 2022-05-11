@@ -8,22 +8,22 @@ import java.net.URL;
 
 public class FileDownloader {
 
-  private final String url;
-  private final File file;
-  
-  public FileDownloader(String url, File file) {
-    this.url = url;
-    this.file = file;
-  }
+    private final String url;
+    private final File file;
 
-  public boolean download() {
-    if (this.file != null && this.url != null && this.url.startsWith("http"))
-      try {
-        FileUtils.copyURLToFile(new URL(this.url), this.file);
-        return true;
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    return false;
-  }
+    public FileDownloader(String url, File file) {
+        this.url = url;
+        this.file = file;
+    }
+
+    public boolean download() {
+        if (this.file != null && this.url != null && this.url.startsWith("http"))
+            try {
+                FileUtils.copyURLToFile(new URL(this.url), this.file);
+                return true;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        return false;
+    }
 }

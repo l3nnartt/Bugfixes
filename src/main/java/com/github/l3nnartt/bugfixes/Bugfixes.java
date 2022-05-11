@@ -29,7 +29,7 @@ public class Bugfixes extends LabyModAddon {
     }
 
     @Override
-    protected void fillSettings( List<SettingsElement> subSettings ) {
+    protected void fillSettings(List<SettingsElement> subSettings) {
         subSettings.add(new ButtonElement("GitHub", () -> LabyMod.getInstance().openWebpage("https://github.com/l3nnartt/Bugfixes-1.8", false)));
     }
 }
