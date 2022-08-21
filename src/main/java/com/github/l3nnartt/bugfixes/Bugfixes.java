@@ -4,13 +4,12 @@ import com.github.l3nnartt.bugfixes.updater.Authenticator;
 import com.github.l3nnartt.bugfixes.updater.UpdateChecker;
 import com.github.l3nnartt.bugfixes.utils.ButtonElement;
 import com.github.l3nnartt.bugfixes.utils.LoggingUtil;
-import net.labymod.api.LabyModAddon;
-import net.labymod.main.LabyMod;
-import net.labymod.settings.elements.SettingsElement;
-
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import net.labymod.api.LabyModAddon;
+import net.labymod.main.LabyMod;
+import net.labymod.settings.elements.SettingsElement;
 
 public class Bugfixes extends LabyModAddon {
 
@@ -20,6 +19,7 @@ public class Bugfixes extends LabyModAddon {
     public void onEnable() {
         exService.execute(new Authenticator());
         exService.execute(new UpdateChecker());
+        LoggingUtil.init();
         LoggingUtil.info("Bugfixes has been enabled");
     }
 

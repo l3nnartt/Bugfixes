@@ -1,10 +1,16 @@
 package com.github.l3nnartt.bugfixes.utils;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoggingUtil {
+
     private static final Logger LOGGER = Logger.getLogger("Bugfixes");
     private static final String PREFIX = "[Bugfixes] ";
+
+    public static void init() {
+        LOGGER.getParent().getHandlers()[0].setLevel(Level.ALL);
+    }
 
     /**
      * Logs a message at the INFO level.
